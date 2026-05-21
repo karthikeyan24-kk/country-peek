@@ -1,0 +1,114 @@
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #0052cc;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__brand {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 2rem;
+  font-weight: 500;
+}
+
+.header__nav a {
+  color: white;
+  transition: opacity 0.2s ease;
+}
+
+.header__nav a:hover {
+  opacity: 0.8;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  padding: 2rem 0;
+}
+
+.search-bar__input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar__input:focus {
+  outline: none;
+  border-color: #0052cc;
+}
+
+.search-bar__input::placeholder {
+  color: #999;
+}
+
+/* Home Page Styles */
+.home {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home__placeholder {
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Not Found Page Styles */
+.not-found {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.not-found p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.not-found a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0052cc;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.not-found a:hover {
+  background-color: #0041a3;
+}
+
+/* Placeholder Styles */
+.placeholder {
+  padding: 2rem;
+  text-align: center;
+  color: #999;
+}
+
+/* Main Content */
+main {
+  min-height: calc(100vh - 80px);
+}
