@@ -67,6 +67,73 @@
   font-size: 1rem;
 }
 
+.home__status {
+  padding: 1.5rem;
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.home__status--error {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Card Styles */
+.card {
+  display: block;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card__flag {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.card__body {
+  padding: 1rem;
+}
+
+.card__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: #111;
+}
+
+.card__body p {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.card__body p span {
+  font-weight: 600;
+  color: #333;
+}
+
 /* Not Found Page Styles */
 .not-found {
   padding: 4rem 2rem;
