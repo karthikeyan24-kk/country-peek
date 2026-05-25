@@ -1,5 +1,25 @@
 /* Global Reset and Base Styles */
 
+:root {
+  --bg: #fafafa;
+  --text: #111;
+  --card-bg: #ffffff;
+  --header-bg: #0052cc;
+  --input-border: #ddd;
+  --muted: #666;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a2e;
+  --text: #e0e0e0;
+  --card-bg: #2a2a3e;
+  --header-bg: #0a0a1a;
+  --input-border: #444;
+  --muted: #999;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15,8 +35,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #111;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
