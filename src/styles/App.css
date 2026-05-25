@@ -375,3 +375,39 @@ main {
   color: #d32f2f;
   font-weight: 500;
 }
+
+/* Favourite Button Styles */
+.fav-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  margin-top: 0.75rem;
+  display: inline-block;
+}
+
+.fav-btn:hover {
+  color: #d32f2f;
+  background-color: rgba(211, 47, 47, 0.08);
+}
+
+.fav-btn--saved {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.fav-btn--saved:hover {
+  background-color: rgba(211, 47, 47, 0.15);
+}
+
+/* Favourites Page */
+.favourites {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
