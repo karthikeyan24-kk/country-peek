@@ -13,7 +13,10 @@ function Home() {
   const [sortBy, setSortBy] = useState('')
 
   useEffect(() => {
-    if (!query) {
+    // Trim query and check if empty
+    const trimmedQuery = query.trim()
+    
+    if (!trimmedQuery) {
       setCountries([])
       setError(null)
       setRegion('All')
@@ -24,7 +27,7 @@ function Home() {
     setLoading(true)
 
     const timer = setTimeout(() => {
-      fetch(`https://restcountries.com/v3.1/name/${query}`)
+      fetch(`https://restcountries.com/v3.1/name/${trimmedQuery}`)
         .then((res) => {
           if (!res.ok) throw new Error('Not found')
           return res.json()
@@ -74,6 +77,10 @@ function Home() {
             <CountryCard key={country.cca3} country={country} />
           ))}
         </div>
+      )}
+
+      {!loading && !error && countries.length > 0 && displayed.length === 0 && (
+        <p className="home__status">No countries found for the selected region.</p>
       )}
 
       {!loading && !error && countries.length === 0 && query === '' && (

@@ -7,6 +7,7 @@ function FilterBar({ region, onRegionChange, sortBy, onSortChange }) {
         value={region}
         onChange={(e) => onRegionChange(e.target.value)}
         className="filter-bar__select"
+        aria-label="Filter countries by region"
       >
         <option value="All">All Regions</option>
         <option value="Africa">Africa</option>
@@ -20,6 +21,7 @@ function FilterBar({ region, onRegionChange, sortBy, onSortChange }) {
         value={sortBy}
         onChange={(e) => onSortChange(e.target.value)}
         className="filter-bar__select"
+        aria-label="Sort countries"
       >
         <option value="">Default</option>
         <option value="name">Name (A–Z)</option>
